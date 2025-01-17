@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâniva</h1>
+    <p>Tente abrir esse site em váriois dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!-- <audio src="audio/guanacast-33.mp3" controls autoplay></audio> -->
+     <audio preload="metadata" autoplay controls loop>
+        <!-- Parâmetros:
+         preload - auto - e preciso carregar todo o audio antes de mostrar a página.
+                 - metadata - mostra informações básicas.
+                 - none - Não carrega nada.
+         controls - utilizado para mostrar os controles.
+         loop - toca a música novamente quando finaliza.
+        -->
+        <source src="midia/nightRun.mp3" type="audio/mpeg">
+        <source src="midia/nightRun.ogg" type="audio/ogg">
+        <!-- Se possível não utilizar o wav são arquivos muito pesados. -->
+        <source src="midia/nightRun.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/nightRun.mp3">Clique aqui</a> para baixar o arquivo em MP3.</p>
+     </audio>
+
+     <h1>Links de referência para vídeos:</h1>
+     <p>https://www.pexels.com/pt-br/ baixar vídeos</p>
+     <p>https://handbrake.fr/ utilizado para converter vídeos</p>
+     <h2>Inserindo vídeos hospedados localmente</h2>
+     <p>Este vídeo está hospedado no meu próprio servidor</p>
+     <!-- <video src="videos/Meu-Video2.webm" width="500" controls></video> -->
+      <video width="500" controls>
+        <source src="videos/meu-video.mp4" type="video/mp4">
+        <source src="videos/Meu-Video2.mkv" type="video/mkv">
+        <source src="videos/Meu-Video2.mp4" type="video/mp4">
+        <source src="videos/Meu-Video2.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+      </video>
+
+
+</body>
+</html>
