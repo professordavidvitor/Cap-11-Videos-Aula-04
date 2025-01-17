@@ -37,15 +37,18 @@
      <h2>Inserindo vídeos hospedados localmente</h2>
      <p>Este vídeo está hospedado no meu próprio servidor</p>
      <!-- <video src="videos/Meu-Video2.webm" width="500" controls></video> -->
-      <video width="500" controls>
+      <video width="500" poster="" controls>
+        <!-- Width - responsável pelo tamanho a ser visualizado
+             poster - responsável por mostrar uma capa antes do play
+             controls - responsável por mostrar os botões de controle.
+             Obs.: Importante colocar a ordem correta do maior para o menor (tamanho).
+             Obs2.: Esta técnica de hospedágem local vai consumir muita  banda de dados, e pode ser um problema para o seu cliente.
+        -->
         <source src="videos/meu-video.mp4" type="video/mp4">
         <source src="videos/Meu-Video2.mkv" type="video/mkv">
         <source src="videos/Meu-Video2.mp4" type="video/mp4">
         <source src="videos/Meu-Video2.webm" type="video/webm">
         <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
-        <p>Parei com 9:35</p>
       </video>
-
-
 </body>
 </html>
